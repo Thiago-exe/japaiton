@@ -10,11 +10,11 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface japaitonVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#program}.
+	 * Visit a parse tree produced by {@link japaitonParser#programa}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitProgram(japaitonParser.ProgramContext ctx);
+	T visitPrograma(japaitonParser.ProgramaContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link japaitonParser#main}.
 	 * @param ctx the parse tree
@@ -22,233 +22,269 @@ public interface japaitonVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitMain(japaitonParser.MainContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#function}.
+	 * Visit a parse tree produced by {@link japaitonParser#funcao}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFunction(japaitonParser.FunctionContext ctx);
+	T visitFuncao(japaitonParser.FuncaoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#parameters}.
+	 * Visit a parse tree produced by {@link japaitonParser#parametros}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitParameters(japaitonParser.ParametersContext ctx);
+	T visitParametros(japaitonParser.ParametrosContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#parameter}.
+	 * Visit a parse tree produced by {@link japaitonParser#parametro}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitParameter(japaitonParser.ParameterContext ctx);
+	T visitParametro(japaitonParser.ParametroContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#block}.
+	 * Visit a parse tree produced by {@link japaitonParser#escopo}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBlock(japaitonParser.BlockContext ctx);
+	T visitEscopo(japaitonParser.EscopoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#statement}.
+	 * Visit a parse tree produced by {@link japaitonParser#blocoDeCodigo}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitStatement(japaitonParser.StatementContext ctx);
+	T visitBlocoDeCodigo(japaitonParser.BlocoDeCodigoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#returnStatement}.
+	 * Visit a parse tree produced by {@link japaitonParser#returnDeclaracao}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitReturnStatement(japaitonParser.ReturnStatementContext ctx);
+	T visitReturnDeclaracao(japaitonParser.ReturnDeclaracaoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#variables}.
+	 * Visit a parse tree produced by {@link japaitonParser#variaveis}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVariables(japaitonParser.VariablesContext ctx);
+	T visitVariaveis(japaitonParser.VariaveisContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#variableDeclaration}.
+	 * Visit a parse tree produced by {@link japaitonParser#declaracaoVariavel}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVariableDeclaration(japaitonParser.VariableDeclarationContext ctx);
+	T visitDeclaracaoVariavel(japaitonParser.DeclaracaoVariavelContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#variableList}.
+	 * Visit a parse tree produced by {@link japaitonParser#listaVariaveis}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVariableList(japaitonParser.VariableListContext ctx);
+	T visitListaVariaveis(japaitonParser.ListaVariaveisContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#variableAssignment}.
+	 * Visit a parse tree produced by {@link japaitonParser#atribuicaoVariavel}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVariableAssignment(japaitonParser.VariableAssignmentContext ctx);
+	T visitAtribuicaoVariavel(japaitonParser.AtribuicaoVariavelContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#multipleVariableAssignment}.
+	 * Visit a parse tree produced by {@link japaitonParser#atribuicaoMultiplaVariaveis}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMultipleVariableAssignment(japaitonParser.MultipleVariableAssignmentContext ctx);
+	T visitAtribuicaoMultiplaVariaveis(japaitonParser.AtribuicaoMultiplaVariaveisContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#constantDeclaration}.
+	 * Visit a parse tree produced by {@link japaitonParser#atribuicaoValorVariavel}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitConstantDeclaration(japaitonParser.ConstantDeclarationContext ctx);
+	T visitAtribuicaoValorVariavel(japaitonParser.AtribuicaoValorVariavelContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#constantList}.
+	 * Visit a parse tree produced by {@link japaitonParser#declaracaoConstante}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitConstantList(japaitonParser.ConstantListContext ctx);
+	T visitDeclaracaoConstante(japaitonParser.DeclaracaoConstanteContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#constantAssignment}.
+	 * Visit a parse tree produced by {@link japaitonParser#listaConstantes}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitConstantAssignment(japaitonParser.ConstantAssignmentContext ctx);
+	T visitListaConstantes(japaitonParser.ListaConstantesContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#constantValue}.
+	 * Visit a parse tree produced by {@link japaitonParser#atribuicaoConstante}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitConstantValue(japaitonParser.ConstantValueContext ctx);
+	T visitAtribuicaoConstante(japaitonParser.AtribuicaoConstanteContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#ifStatement}.
+	 * Visit a parse tree produced by {@link japaitonParser#valorConstante}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIfStatement(japaitonParser.IfStatementContext ctx);
+	T visitValorConstante(japaitonParser.ValorConstanteContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#ifElseStatement}.
+	 * Visit a parse tree produced by {@link japaitonParser#ifDeclaracao}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIfElseStatement(japaitonParser.IfElseStatementContext ctx);
+	T visitIfDeclaracao(japaitonParser.IfDeclaracaoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#whileStatement}.
+	 * Visit a parse tree produced by {@link japaitonParser#ifElseDeclaracao}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitWhileStatement(japaitonParser.WhileStatementContext ctx);
+	T visitIfElseDeclaracao(japaitonParser.IfElseDeclaracaoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#expressionStatement}.
+	 * Visit a parse tree produced by {@link japaitonParser#whileDeclaracao}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpressionStatement(japaitonParser.ExpressionStatementContext ctx);
+	T visitWhileDeclaracao(japaitonParser.WhileDeclaracaoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#printStatement}.
+	 * Visit a parse tree produced by {@link japaitonParser#printDeclaracao}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPrintStatement(japaitonParser.PrintStatementContext ctx);
+	T visitPrintDeclaracao(japaitonParser.PrintDeclaracaoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#expressionList}.
+	 * Visit a parse tree produced by {@link japaitonParser#printParametros}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpressionList(japaitonParser.ExpressionListContext ctx);
+	T visitPrintParametros(japaitonParser.PrintParametrosContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#condition}.
+	 * Visit a parse tree produced by {@link japaitonParser#scanfDeclaracao}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCondition(japaitonParser.ConditionContext ctx);
+	T visitScanfDeclaracao(japaitonParser.ScanfDeclaracaoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#expression}.
+	 * Visit a parse tree produced by {@link japaitonParser#listaIDs}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpression(japaitonParser.ExpressionContext ctx);
+	T visitListaIDs(japaitonParser.ListaIDsContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#logicalExpression}.
+	 * Visit a parse tree produced by {@link japaitonParser#idOrString}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLogicalExpression(japaitonParser.LogicalExpressionContext ctx);
+	T visitIdOrString(japaitonParser.IdOrStringContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#logicOperator}.
+	 * Visit a parse tree produced by {@link japaitonParser#expressoesDeclaracao}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLogicOperator(japaitonParser.LogicOperatorContext ctx);
+	T visitExpressoesDeclaracao(japaitonParser.ExpressoesDeclaracaoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#equalityExpression}.
+	 * Visit a parse tree produced by {@link japaitonParser#listaExpressoes}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitEqualityExpression(japaitonParser.EqualityExpressionContext ctx);
+	T visitListaExpressoes(japaitonParser.ListaExpressoesContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#equalityOperator}.
+	 * Visit a parse tree produced by {@link japaitonParser#condicao}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitEqualityOperator(japaitonParser.EqualityOperatorContext ctx);
+	T visitCondicao(japaitonParser.CondicaoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#relationalExpression}.
+	 * Visit a parse tree produced by {@link japaitonParser#expressoes}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitRelationalExpression(japaitonParser.RelationalExpressionContext ctx);
+	T visitExpressoes(japaitonParser.ExpressoesContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#relationalOperator}.
+	 * Visit a parse tree produced by {@link japaitonParser#expressaoString}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitRelationalOperator(japaitonParser.RelationalOperatorContext ctx);
+	T visitExpressaoString(japaitonParser.ExpressaoStringContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#additiveExpression}.
+	 * Visit a parse tree produced by {@link japaitonParser#expressaoLogica}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAdditiveExpression(japaitonParser.AdditiveExpressionContext ctx);
+	T visitExpressaoLogica(japaitonParser.ExpressaoLogicaContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#additiveOperator}.
+	 * Visit a parse tree produced by {@link japaitonParser#operadoresLogicos}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAdditiveOperator(japaitonParser.AdditiveOperatorContext ctx);
+	T visitOperadoresLogicos(japaitonParser.OperadoresLogicosContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#multiplicativeExpression}.
+	 * Visit a parse tree produced by {@link japaitonParser#expressaoIgualdade}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMultiplicativeExpression(japaitonParser.MultiplicativeExpressionContext ctx);
+	T visitExpressaoIgualdade(japaitonParser.ExpressaoIgualdadeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#multiplicativeOperator}.
+	 * Visit a parse tree produced by {@link japaitonParser#operadorIgualdade}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMultiplicativeOperator(japaitonParser.MultiplicativeOperatorContext ctx);
+	T visitOperadorIgualdade(japaitonParser.OperadorIgualdadeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#unaryExpression}.
+	 * Visit a parse tree produced by {@link japaitonParser#expressaoRelacional}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitUnaryExpression(japaitonParser.UnaryExpressionContext ctx);
+	T visitExpressaoRelacional(japaitonParser.ExpressaoRelacionalContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#unaryOperator}.
+	 * Visit a parse tree produced by {@link japaitonParser#operadorGrandeza}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitUnaryOperator(japaitonParser.UnaryOperatorContext ctx);
+	T visitOperadorGrandeza(japaitonParser.OperadorGrandezaContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#primaryExpression}.
+	 * Visit a parse tree produced by {@link japaitonParser#expressaoGrandeza}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPrimaryExpression(japaitonParser.PrimaryExpressionContext ctx);
+	T visitExpressaoGrandeza(japaitonParser.ExpressaoGrandezaContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#functionCall}.
+	 * Visit a parse tree produced by {@link japaitonParser#operadorAditivo}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFunctionCall(japaitonParser.FunctionCallContext ctx);
+	T visitOperadorAditivo(japaitonParser.OperadorAditivoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link japaitonParser#argumentList}.
+	 * Visit a parse tree produced by {@link japaitonParser#expressaoMultiplicativa}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitArgumentList(japaitonParser.ArgumentListContext ctx);
+	T visitExpressaoMultiplicativa(japaitonParser.ExpressaoMultiplicativaContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link japaitonParser#operadorMultiplicativo}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitOperadorMultiplicativo(japaitonParser.OperadorMultiplicativoContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link japaitonParser#expressaoNegativa}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpressaoNegativa(japaitonParser.ExpressaoNegativaContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link japaitonParser#operadorNegacao}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitOperadorNegacao(japaitonParser.OperadorNegacaoContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link japaitonParser#expressaoPrimaria}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpressaoPrimaria(japaitonParser.ExpressaoPrimariaContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link japaitonParser#chamadaFuncao}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitChamadaFuncao(japaitonParser.ChamadaFuncaoContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link japaitonParser#listaArgumentos}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitListaArgumentos(japaitonParser.ListaArgumentosContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link japaitonParser#type}.
 	 * @param ctx the parse tree

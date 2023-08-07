@@ -1,6 +1,6 @@
 grammar japaiton;
 
-// DECLARAÇÃO TIPOS
+// DECLARAÇÃO DE TIPOS
 INT: 'int';
 FLOAT: 'float';
 STR: 'str';
@@ -21,11 +21,11 @@ SCANF: 'scanf';
 // TIPOS
 INTEGER: '0' | '0'* [1-9] [0-9]*;
 FLOAT_NUMBER: [0-9]+ '.' [0-9]*;
-STRING: '"' ~["\r\n]* '"';
-BOOLEAN: 'true' | 'false' | 'TRUE' | 'FALSE';
-IDENTIFICADOR: [a-zA-Z] [a-zA-Z0-9_]*;
+STRING: '"' ~["\r\n\\]* '"';
+BOOLEAN: 'true' | 'false' | 'TRUE' | 'FALSE' | 'True' | 'False';
+ID: [a-z] [a-zA-Z0-9_]*;
 
-// SIMBOLOS
+// SÍMBOLOS
 EQUAL: '=';
 LPAREN: '(';
 RPAREN: ')';
@@ -43,72 +43,85 @@ LESSEQUAL: '<=';
 GREATER: '>';
 LESS: '<';
 NOT: '!';
-AND: '&&';
-OR: '|';
 
 WHITESPACE: [ \t\r\n]+ -> skip;
 COMMENT: '//' ~[\r\n]* -> skip;
 
-// Parser rules
+// Regras do parser
 programa: funcao* main;
-// main
-main: 'main' ':' (variaveis)? escopo;
-// modelo função
-funcao: IDENTIFICADOR '(' parametros? ')' ':' type (variaveis)? escopo;
-
+main: 'main' ':' (variaveis)? escopo END;
+funcao: ID '(' parametros? ')' ':' type (variaveis)? escopo END;
 parametros: parametro (',' parametro)*;
+parametro: type ID;
 
-parametro: type IDENTIFICADOR;
-// escopo de toda funcao
-escopo:  blocoDeCodigo* END;
+escopo: blocoDeCodigo*;
 
 blocoDeCodigo: ifDeclaracao
-         | whileDeclaracao
-         | expressoesDeclaracao
-         | printDeclaracao
-         | returnDeclaracao
-         | ifElseDeclaracao;
+    | ifElseDeclaracao
+    | whileDeclaracao
+    | atribuicaoValorVariavel
+    | printDeclaracao
+    | scanfDeclaracao
+    | returnDeclaracao;
 
-returnDeclaracao: RETURN blocoDeCodigo;
+returnDeclaracao: RETURN expressoesDeclaracao;
 
-variaveis: deeclaracaoVariavel (blocoDeCodigo)?;
+variaveis: declaracaoVariavel (blocoDeCodigo)?;
 
-deeclaracaoVariavel: VAR COLON listaVariaveis;
+declaracaoVariavel: VAR COLON listaVariaveis*;
 
-listaVariaveis: atribuicaoVariavel | atribuicaoMultiplaVariaveis ;
+listaVariaveis: atribuicaoVariavel | atribuicaoMultiplaVariaveis | atribuicaoValorVariavel | declaracaoConstante;
 
-atribuicaoVariavel: IDENTIFICADOR COLON type SEMICOLON;
+atribuicaoVariavel: (ID COLON type SEMICOLON)+;
 
-atribuicaoMultiplaVariaveis: IDENTIFICADOR (COMMA IDENTIFICADOR)+ COLON type SEMICOLON;
-// NAO UTILIZADA Depois que resolver variaveis normais sera utilizada
+atribuicaoMultiplaVariaveis: ID (COMMA ID)+ COLON type SEMICOLON;
+
+atribuicaoValorVariavel: ID EQUAL expressoesDeclaracao;
+
 declaracaoConstante: CONST listaConstantes SEMICOLON;
 
 listaConstantes: (atribuicaoConstante (COMMA atribuicaoConstante)*)?;
 
-atribuicaoConstante: IDENTIFICADOR '=' valorConstante;
+atribuicaoConstante: ID EQUAL valorConstante;
 
 valorConstante: INTEGER | FLOAT_NUMBER | STRING | BOOLEAN;
-// FIM CONSTANTES
 
-ifDeclaracao: IF LPAREN condicao RPAREN COLON escopo ;
+ifDeclaracao: IF LPAREN condicao RPAREN COLON escopo END;
 
-ifElseDeclaracao:IF LPAREN condicao RPAREN COLON blocoDeCodigo* ELSE COLON escopo;
+ifElseDeclaracao: IF LPAREN condicao RPAREN COLON escopo ELSE COLON escopo END;
 
-whileDeclaracao: WHILE LPAREN condicao RPAREN COLON escopo;
+whileDeclaracao: WHILE LPAREN condicao RPAREN COLON escopo END;
 
-expressoesDeclaracao: expressao SEMICOLON;
+printDeclaracao: PRINT LPAREN printParametros (COMMA printParametros)* RPAREN SEMICOLON;
 
-printDeclaracao: PRINT LPAREN listaExpressoes? RPAREN SEMICOLON;
+printParametros: idOrString | listaExpressoes | chamadaFuncao;
 
-listaExpressoes: expressao (COMMA expressao)*;
+scanfDeclaracao: SCANF LPAREN listaIDs RPAREN SEMICOLON;
 
-condicao: expressao;
+listaIDs: ID (COMMA ID)*;
 
-expressao: expressaoLogica;
+idOrString: STRING | ID;
+
+expressoesDeclaracao: expressoes SEMICOLON;
+
+listaExpressoes: expressoes (COMMA expressoes)*;
+
+condicao: expressoes;
+
+expressoes: expressaoLogica
+    | expressaoGrandeza
+    | expressaoIgualdade
+    | expressaoMultiplicativa
+    | expressaoNegativa
+    | expressaoPrimaria
+    | expressaoRelacional
+    | expressaoString;
+
+expressaoString: STRING;
 
 expressaoLogica: expressaoIgualdade (operadoresLogicos expressaoIgualdade)*;
 
-operadoresLogicos: AND | OR;
+operadoresLogicos: 'AND' | 'OR';
 
 expressaoIgualdade: expressaoRelacional (operadorIgualdade expressaoRelacional)*;
 
@@ -126,20 +139,20 @@ expressaoMultiplicativa: expressaoNegativa (operadorMultiplicativo expressaoNega
 
 operadorMultiplicativo: ASTERISK | SLASH;
 
-expressaoNegativa: operadorNegacao expressaoPrimaria | expressaoPrimaria;
+expressaoNegativa: operadorNegacao? expressaoPrimaria;
 
 operadorNegacao: MINUS | NOT;
 
 expressaoPrimaria: INTEGER
-                | FLOAT_NUMBER
-                | STRING
-                | BOOLEAN
-                | IDENTIFICADOR
-                | chamadaFuncao
-                | LPAREN expressao RPAREN;
+    | FLOAT_NUMBER
+    | STRING
+    | BOOLEAN
+    | ID
+    | chamadaFuncao
+    | LPAREN expressoes RPAREN;
 
-chamadaFuncao: IDENTIFICADOR LPAREN listaArgumentos? RPAREN;
+chamadaFuncao: ID LPAREN listaArgumentos? RPAREN;
 
-listaArgumentos: expressao (COMMA expressao)*;
+listaArgumentos: expressoes (COMMA expressoes)*;
 
 type: INT | FLOAT | STR | BOOL | VOID;

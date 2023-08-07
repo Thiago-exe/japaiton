@@ -7,15 +7,15 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface japaitonListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#program}.
+	 * Enter a parse tree produced by {@link japaitonParser#programa}.
 	 * @param ctx the parse tree
 	 */
-	void enterProgram(japaitonParser.ProgramContext ctx);
+	void enterPrograma(japaitonParser.ProgramaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#program}.
+	 * Exit a parse tree produced by {@link japaitonParser#programa}.
 	 * @param ctx the parse tree
 	 */
-	void exitProgram(japaitonParser.ProgramContext ctx);
+	void exitPrograma(japaitonParser.ProgramaContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link japaitonParser#main}.
 	 * @param ctx the parse tree
@@ -27,385 +27,445 @@ public interface japaitonListener extends ParseTreeListener {
 	 */
 	void exitMain(japaitonParser.MainContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#function}.
+	 * Enter a parse tree produced by {@link japaitonParser#funcao}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunction(japaitonParser.FunctionContext ctx);
+	void enterFuncao(japaitonParser.FuncaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#function}.
+	 * Exit a parse tree produced by {@link japaitonParser#funcao}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunction(japaitonParser.FunctionContext ctx);
+	void exitFuncao(japaitonParser.FuncaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#parameters}.
+	 * Enter a parse tree produced by {@link japaitonParser#parametros}.
 	 * @param ctx the parse tree
 	 */
-	void enterParameters(japaitonParser.ParametersContext ctx);
+	void enterParametros(japaitonParser.ParametrosContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#parameters}.
+	 * Exit a parse tree produced by {@link japaitonParser#parametros}.
 	 * @param ctx the parse tree
 	 */
-	void exitParameters(japaitonParser.ParametersContext ctx);
+	void exitParametros(japaitonParser.ParametrosContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#parameter}.
+	 * Enter a parse tree produced by {@link japaitonParser#parametro}.
 	 * @param ctx the parse tree
 	 */
-	void enterParameter(japaitonParser.ParameterContext ctx);
+	void enterParametro(japaitonParser.ParametroContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#parameter}.
+	 * Exit a parse tree produced by {@link japaitonParser#parametro}.
 	 * @param ctx the parse tree
 	 */
-	void exitParameter(japaitonParser.ParameterContext ctx);
+	void exitParametro(japaitonParser.ParametroContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#block}.
+	 * Enter a parse tree produced by {@link japaitonParser#escopo}.
 	 * @param ctx the parse tree
 	 */
-	void enterBlock(japaitonParser.BlockContext ctx);
+	void enterEscopo(japaitonParser.EscopoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#block}.
+	 * Exit a parse tree produced by {@link japaitonParser#escopo}.
 	 * @param ctx the parse tree
 	 */
-	void exitBlock(japaitonParser.BlockContext ctx);
+	void exitEscopo(japaitonParser.EscopoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#statement}.
+	 * Enter a parse tree produced by {@link japaitonParser#blocoDeCodigo}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(japaitonParser.StatementContext ctx);
+	void enterBlocoDeCodigo(japaitonParser.BlocoDeCodigoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#statement}.
+	 * Exit a parse tree produced by {@link japaitonParser#blocoDeCodigo}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(japaitonParser.StatementContext ctx);
+	void exitBlocoDeCodigo(japaitonParser.BlocoDeCodigoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#returnStatement}.
+	 * Enter a parse tree produced by {@link japaitonParser#returnDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void enterReturnStatement(japaitonParser.ReturnStatementContext ctx);
+	void enterReturnDeclaracao(japaitonParser.ReturnDeclaracaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#returnStatement}.
+	 * Exit a parse tree produced by {@link japaitonParser#returnDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void exitReturnStatement(japaitonParser.ReturnStatementContext ctx);
+	void exitReturnDeclaracao(japaitonParser.ReturnDeclaracaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#variables}.
+	 * Enter a parse tree produced by {@link japaitonParser#variaveis}.
 	 * @param ctx the parse tree
 	 */
-	void enterVariables(japaitonParser.VariablesContext ctx);
+	void enterVariaveis(japaitonParser.VariaveisContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#variables}.
+	 * Exit a parse tree produced by {@link japaitonParser#variaveis}.
 	 * @param ctx the parse tree
 	 */
-	void exitVariables(japaitonParser.VariablesContext ctx);
+	void exitVariaveis(japaitonParser.VariaveisContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#variableDeclaration}.
+	 * Enter a parse tree produced by {@link japaitonParser#declaracaoVariavel}.
 	 * @param ctx the parse tree
 	 */
-	void enterVariableDeclaration(japaitonParser.VariableDeclarationContext ctx);
+	void enterDeclaracaoVariavel(japaitonParser.DeclaracaoVariavelContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#variableDeclaration}.
+	 * Exit a parse tree produced by {@link japaitonParser#declaracaoVariavel}.
 	 * @param ctx the parse tree
 	 */
-	void exitVariableDeclaration(japaitonParser.VariableDeclarationContext ctx);
+	void exitDeclaracaoVariavel(japaitonParser.DeclaracaoVariavelContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#variableList}.
+	 * Enter a parse tree produced by {@link japaitonParser#listaVariaveis}.
 	 * @param ctx the parse tree
 	 */
-	void enterVariableList(japaitonParser.VariableListContext ctx);
+	void enterListaVariaveis(japaitonParser.ListaVariaveisContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#variableList}.
+	 * Exit a parse tree produced by {@link japaitonParser#listaVariaveis}.
 	 * @param ctx the parse tree
 	 */
-	void exitVariableList(japaitonParser.VariableListContext ctx);
+	void exitListaVariaveis(japaitonParser.ListaVariaveisContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#variableAssignment}.
+	 * Enter a parse tree produced by {@link japaitonParser#atribuicaoVariavel}.
 	 * @param ctx the parse tree
 	 */
-	void enterVariableAssignment(japaitonParser.VariableAssignmentContext ctx);
+	void enterAtribuicaoVariavel(japaitonParser.AtribuicaoVariavelContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#variableAssignment}.
+	 * Exit a parse tree produced by {@link japaitonParser#atribuicaoVariavel}.
 	 * @param ctx the parse tree
 	 */
-	void exitVariableAssignment(japaitonParser.VariableAssignmentContext ctx);
+	void exitAtribuicaoVariavel(japaitonParser.AtribuicaoVariavelContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#multipleVariableAssignment}.
+	 * Enter a parse tree produced by {@link japaitonParser#atribuicaoMultiplaVariaveis}.
 	 * @param ctx the parse tree
 	 */
-	void enterMultipleVariableAssignment(japaitonParser.MultipleVariableAssignmentContext ctx);
+	void enterAtribuicaoMultiplaVariaveis(japaitonParser.AtribuicaoMultiplaVariaveisContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#multipleVariableAssignment}.
+	 * Exit a parse tree produced by {@link japaitonParser#atribuicaoMultiplaVariaveis}.
 	 * @param ctx the parse tree
 	 */
-	void exitMultipleVariableAssignment(japaitonParser.MultipleVariableAssignmentContext ctx);
+	void exitAtribuicaoMultiplaVariaveis(japaitonParser.AtribuicaoMultiplaVariaveisContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#constantDeclaration}.
+	 * Enter a parse tree produced by {@link japaitonParser#atribuicaoValorVariavel}.
 	 * @param ctx the parse tree
 	 */
-	void enterConstantDeclaration(japaitonParser.ConstantDeclarationContext ctx);
+	void enterAtribuicaoValorVariavel(japaitonParser.AtribuicaoValorVariavelContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#constantDeclaration}.
+	 * Exit a parse tree produced by {@link japaitonParser#atribuicaoValorVariavel}.
 	 * @param ctx the parse tree
 	 */
-	void exitConstantDeclaration(japaitonParser.ConstantDeclarationContext ctx);
+	void exitAtribuicaoValorVariavel(japaitonParser.AtribuicaoValorVariavelContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#constantList}.
+	 * Enter a parse tree produced by {@link japaitonParser#declaracaoConstante}.
 	 * @param ctx the parse tree
 	 */
-	void enterConstantList(japaitonParser.ConstantListContext ctx);
+	void enterDeclaracaoConstante(japaitonParser.DeclaracaoConstanteContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#constantList}.
+	 * Exit a parse tree produced by {@link japaitonParser#declaracaoConstante}.
 	 * @param ctx the parse tree
 	 */
-	void exitConstantList(japaitonParser.ConstantListContext ctx);
+	void exitDeclaracaoConstante(japaitonParser.DeclaracaoConstanteContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#constantAssignment}.
+	 * Enter a parse tree produced by {@link japaitonParser#listaConstantes}.
 	 * @param ctx the parse tree
 	 */
-	void enterConstantAssignment(japaitonParser.ConstantAssignmentContext ctx);
+	void enterListaConstantes(japaitonParser.ListaConstantesContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#constantAssignment}.
+	 * Exit a parse tree produced by {@link japaitonParser#listaConstantes}.
 	 * @param ctx the parse tree
 	 */
-	void exitConstantAssignment(japaitonParser.ConstantAssignmentContext ctx);
+	void exitListaConstantes(japaitonParser.ListaConstantesContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#constantValue}.
+	 * Enter a parse tree produced by {@link japaitonParser#atribuicaoConstante}.
 	 * @param ctx the parse tree
 	 */
-	void enterConstantValue(japaitonParser.ConstantValueContext ctx);
+	void enterAtribuicaoConstante(japaitonParser.AtribuicaoConstanteContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#constantValue}.
+	 * Exit a parse tree produced by {@link japaitonParser#atribuicaoConstante}.
 	 * @param ctx the parse tree
 	 */
-	void exitConstantValue(japaitonParser.ConstantValueContext ctx);
+	void exitAtribuicaoConstante(japaitonParser.AtribuicaoConstanteContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#ifStatement}.
+	 * Enter a parse tree produced by {@link japaitonParser#valorConstante}.
 	 * @param ctx the parse tree
 	 */
-	void enterIfStatement(japaitonParser.IfStatementContext ctx);
+	void enterValorConstante(japaitonParser.ValorConstanteContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#ifStatement}.
+	 * Exit a parse tree produced by {@link japaitonParser#valorConstante}.
 	 * @param ctx the parse tree
 	 */
-	void exitIfStatement(japaitonParser.IfStatementContext ctx);
+	void exitValorConstante(japaitonParser.ValorConstanteContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#ifElseStatement}.
+	 * Enter a parse tree produced by {@link japaitonParser#ifDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void enterIfElseStatement(japaitonParser.IfElseStatementContext ctx);
+	void enterIfDeclaracao(japaitonParser.IfDeclaracaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#ifElseStatement}.
+	 * Exit a parse tree produced by {@link japaitonParser#ifDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void exitIfElseStatement(japaitonParser.IfElseStatementContext ctx);
+	void exitIfDeclaracao(japaitonParser.IfDeclaracaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#whileStatement}.
+	 * Enter a parse tree produced by {@link japaitonParser#ifElseDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void enterWhileStatement(japaitonParser.WhileStatementContext ctx);
+	void enterIfElseDeclaracao(japaitonParser.IfElseDeclaracaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#whileStatement}.
+	 * Exit a parse tree produced by {@link japaitonParser#ifElseDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void exitWhileStatement(japaitonParser.WhileStatementContext ctx);
+	void exitIfElseDeclaracao(japaitonParser.IfElseDeclaracaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#expressionStatement}.
+	 * Enter a parse tree produced by {@link japaitonParser#whileDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpressionStatement(japaitonParser.ExpressionStatementContext ctx);
+	void enterWhileDeclaracao(japaitonParser.WhileDeclaracaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#expressionStatement}.
+	 * Exit a parse tree produced by {@link japaitonParser#whileDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpressionStatement(japaitonParser.ExpressionStatementContext ctx);
+	void exitWhileDeclaracao(japaitonParser.WhileDeclaracaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#printStatement}.
+	 * Enter a parse tree produced by {@link japaitonParser#printDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrintStatement(japaitonParser.PrintStatementContext ctx);
+	void enterPrintDeclaracao(japaitonParser.PrintDeclaracaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#printStatement}.
+	 * Exit a parse tree produced by {@link japaitonParser#printDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrintStatement(japaitonParser.PrintStatementContext ctx);
+	void exitPrintDeclaracao(japaitonParser.PrintDeclaracaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#expressionList}.
+	 * Enter a parse tree produced by {@link japaitonParser#printParametros}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpressionList(japaitonParser.ExpressionListContext ctx);
+	void enterPrintParametros(japaitonParser.PrintParametrosContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#expressionList}.
+	 * Exit a parse tree produced by {@link japaitonParser#printParametros}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpressionList(japaitonParser.ExpressionListContext ctx);
+	void exitPrintParametros(japaitonParser.PrintParametrosContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#condition}.
+	 * Enter a parse tree produced by {@link japaitonParser#scanfDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void enterCondition(japaitonParser.ConditionContext ctx);
+	void enterScanfDeclaracao(japaitonParser.ScanfDeclaracaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#condition}.
+	 * Exit a parse tree produced by {@link japaitonParser#scanfDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void exitCondition(japaitonParser.ConditionContext ctx);
+	void exitScanfDeclaracao(japaitonParser.ScanfDeclaracaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#expression}.
+	 * Enter a parse tree produced by {@link japaitonParser#listaIDs}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression(japaitonParser.ExpressionContext ctx);
+	void enterListaIDs(japaitonParser.ListaIDsContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#expression}.
+	 * Exit a parse tree produced by {@link japaitonParser#listaIDs}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression(japaitonParser.ExpressionContext ctx);
+	void exitListaIDs(japaitonParser.ListaIDsContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#logicalExpression}.
+	 * Enter a parse tree produced by {@link japaitonParser#idOrString}.
 	 * @param ctx the parse tree
 	 */
-	void enterLogicalExpression(japaitonParser.LogicalExpressionContext ctx);
+	void enterIdOrString(japaitonParser.IdOrStringContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#logicalExpression}.
+	 * Exit a parse tree produced by {@link japaitonParser#idOrString}.
 	 * @param ctx the parse tree
 	 */
-	void exitLogicalExpression(japaitonParser.LogicalExpressionContext ctx);
+	void exitIdOrString(japaitonParser.IdOrStringContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#logicOperator}.
+	 * Enter a parse tree produced by {@link japaitonParser#expressoesDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void enterLogicOperator(japaitonParser.LogicOperatorContext ctx);
+	void enterExpressoesDeclaracao(japaitonParser.ExpressoesDeclaracaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#logicOperator}.
+	 * Exit a parse tree produced by {@link japaitonParser#expressoesDeclaracao}.
 	 * @param ctx the parse tree
 	 */
-	void exitLogicOperator(japaitonParser.LogicOperatorContext ctx);
+	void exitExpressoesDeclaracao(japaitonParser.ExpressoesDeclaracaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#equalityExpression}.
+	 * Enter a parse tree produced by {@link japaitonParser#listaExpressoes}.
 	 * @param ctx the parse tree
 	 */
-	void enterEqualityExpression(japaitonParser.EqualityExpressionContext ctx);
+	void enterListaExpressoes(japaitonParser.ListaExpressoesContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#equalityExpression}.
+	 * Exit a parse tree produced by {@link japaitonParser#listaExpressoes}.
 	 * @param ctx the parse tree
 	 */
-	void exitEqualityExpression(japaitonParser.EqualityExpressionContext ctx);
+	void exitListaExpressoes(japaitonParser.ListaExpressoesContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#equalityOperator}.
+	 * Enter a parse tree produced by {@link japaitonParser#condicao}.
 	 * @param ctx the parse tree
 	 */
-	void enterEqualityOperator(japaitonParser.EqualityOperatorContext ctx);
+	void enterCondicao(japaitonParser.CondicaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#equalityOperator}.
+	 * Exit a parse tree produced by {@link japaitonParser#condicao}.
 	 * @param ctx the parse tree
 	 */
-	void exitEqualityOperator(japaitonParser.EqualityOperatorContext ctx);
+	void exitCondicao(japaitonParser.CondicaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#relationalExpression}.
+	 * Enter a parse tree produced by {@link japaitonParser#expressoes}.
 	 * @param ctx the parse tree
 	 */
-	void enterRelationalExpression(japaitonParser.RelationalExpressionContext ctx);
+	void enterExpressoes(japaitonParser.ExpressoesContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#relationalExpression}.
+	 * Exit a parse tree produced by {@link japaitonParser#expressoes}.
 	 * @param ctx the parse tree
 	 */
-	void exitRelationalExpression(japaitonParser.RelationalExpressionContext ctx);
+	void exitExpressoes(japaitonParser.ExpressoesContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#relationalOperator}.
+	 * Enter a parse tree produced by {@link japaitonParser#expressaoString}.
 	 * @param ctx the parse tree
 	 */
-	void enterRelationalOperator(japaitonParser.RelationalOperatorContext ctx);
+	void enterExpressaoString(japaitonParser.ExpressaoStringContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#relationalOperator}.
+	 * Exit a parse tree produced by {@link japaitonParser#expressaoString}.
 	 * @param ctx the parse tree
 	 */
-	void exitRelationalOperator(japaitonParser.RelationalOperatorContext ctx);
+	void exitExpressaoString(japaitonParser.ExpressaoStringContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#additiveExpression}.
+	 * Enter a parse tree produced by {@link japaitonParser#expressaoLogica}.
 	 * @param ctx the parse tree
 	 */
-	void enterAdditiveExpression(japaitonParser.AdditiveExpressionContext ctx);
+	void enterExpressaoLogica(japaitonParser.ExpressaoLogicaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#additiveExpression}.
+	 * Exit a parse tree produced by {@link japaitonParser#expressaoLogica}.
 	 * @param ctx the parse tree
 	 */
-	void exitAdditiveExpression(japaitonParser.AdditiveExpressionContext ctx);
+	void exitExpressaoLogica(japaitonParser.ExpressaoLogicaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#additiveOperator}.
+	 * Enter a parse tree produced by {@link japaitonParser#operadoresLogicos}.
 	 * @param ctx the parse tree
 	 */
-	void enterAdditiveOperator(japaitonParser.AdditiveOperatorContext ctx);
+	void enterOperadoresLogicos(japaitonParser.OperadoresLogicosContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#additiveOperator}.
+	 * Exit a parse tree produced by {@link japaitonParser#operadoresLogicos}.
 	 * @param ctx the parse tree
 	 */
-	void exitAdditiveOperator(japaitonParser.AdditiveOperatorContext ctx);
+	void exitOperadoresLogicos(japaitonParser.OperadoresLogicosContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#multiplicativeExpression}.
+	 * Enter a parse tree produced by {@link japaitonParser#expressaoIgualdade}.
 	 * @param ctx the parse tree
 	 */
-	void enterMultiplicativeExpression(japaitonParser.MultiplicativeExpressionContext ctx);
+	void enterExpressaoIgualdade(japaitonParser.ExpressaoIgualdadeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#multiplicativeExpression}.
+	 * Exit a parse tree produced by {@link japaitonParser#expressaoIgualdade}.
 	 * @param ctx the parse tree
 	 */
-	void exitMultiplicativeExpression(japaitonParser.MultiplicativeExpressionContext ctx);
+	void exitExpressaoIgualdade(japaitonParser.ExpressaoIgualdadeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#multiplicativeOperator}.
+	 * Enter a parse tree produced by {@link japaitonParser#operadorIgualdade}.
 	 * @param ctx the parse tree
 	 */
-	void enterMultiplicativeOperator(japaitonParser.MultiplicativeOperatorContext ctx);
+	void enterOperadorIgualdade(japaitonParser.OperadorIgualdadeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#multiplicativeOperator}.
+	 * Exit a parse tree produced by {@link japaitonParser#operadorIgualdade}.
 	 * @param ctx the parse tree
 	 */
-	void exitMultiplicativeOperator(japaitonParser.MultiplicativeOperatorContext ctx);
+	void exitOperadorIgualdade(japaitonParser.OperadorIgualdadeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#unaryExpression}.
+	 * Enter a parse tree produced by {@link japaitonParser#expressaoRelacional}.
 	 * @param ctx the parse tree
 	 */
-	void enterUnaryExpression(japaitonParser.UnaryExpressionContext ctx);
+	void enterExpressaoRelacional(japaitonParser.ExpressaoRelacionalContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#unaryExpression}.
+	 * Exit a parse tree produced by {@link japaitonParser#expressaoRelacional}.
 	 * @param ctx the parse tree
 	 */
-	void exitUnaryExpression(japaitonParser.UnaryExpressionContext ctx);
+	void exitExpressaoRelacional(japaitonParser.ExpressaoRelacionalContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#unaryOperator}.
+	 * Enter a parse tree produced by {@link japaitonParser#operadorGrandeza}.
 	 * @param ctx the parse tree
 	 */
-	void enterUnaryOperator(japaitonParser.UnaryOperatorContext ctx);
+	void enterOperadorGrandeza(japaitonParser.OperadorGrandezaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#unaryOperator}.
+	 * Exit a parse tree produced by {@link japaitonParser#operadorGrandeza}.
 	 * @param ctx the parse tree
 	 */
-	void exitUnaryOperator(japaitonParser.UnaryOperatorContext ctx);
+	void exitOperadorGrandeza(japaitonParser.OperadorGrandezaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#primaryExpression}.
+	 * Enter a parse tree produced by {@link japaitonParser#expressaoGrandeza}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrimaryExpression(japaitonParser.PrimaryExpressionContext ctx);
+	void enterExpressaoGrandeza(japaitonParser.ExpressaoGrandezaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#primaryExpression}.
+	 * Exit a parse tree produced by {@link japaitonParser#expressaoGrandeza}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrimaryExpression(japaitonParser.PrimaryExpressionContext ctx);
+	void exitExpressaoGrandeza(japaitonParser.ExpressaoGrandezaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#functionCall}.
+	 * Enter a parse tree produced by {@link japaitonParser#operadorAditivo}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionCall(japaitonParser.FunctionCallContext ctx);
+	void enterOperadorAditivo(japaitonParser.OperadorAditivoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#functionCall}.
+	 * Exit a parse tree produced by {@link japaitonParser#operadorAditivo}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionCall(japaitonParser.FunctionCallContext ctx);
+	void exitOperadorAditivo(japaitonParser.OperadorAditivoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link japaitonParser#argumentList}.
+	 * Enter a parse tree produced by {@link japaitonParser#expressaoMultiplicativa}.
 	 * @param ctx the parse tree
 	 */
-	void enterArgumentList(japaitonParser.ArgumentListContext ctx);
+	void enterExpressaoMultiplicativa(japaitonParser.ExpressaoMultiplicativaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link japaitonParser#argumentList}.
+	 * Exit a parse tree produced by {@link japaitonParser#expressaoMultiplicativa}.
 	 * @param ctx the parse tree
 	 */
-	void exitArgumentList(japaitonParser.ArgumentListContext ctx);
+	void exitExpressaoMultiplicativa(japaitonParser.ExpressaoMultiplicativaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link japaitonParser#operadorMultiplicativo}.
+	 * @param ctx the parse tree
+	 */
+	void enterOperadorMultiplicativo(japaitonParser.OperadorMultiplicativoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link japaitonParser#operadorMultiplicativo}.
+	 * @param ctx the parse tree
+	 */
+	void exitOperadorMultiplicativo(japaitonParser.OperadorMultiplicativoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link japaitonParser#expressaoNegativa}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressaoNegativa(japaitonParser.ExpressaoNegativaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link japaitonParser#expressaoNegativa}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressaoNegativa(japaitonParser.ExpressaoNegativaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link japaitonParser#operadorNegacao}.
+	 * @param ctx the parse tree
+	 */
+	void enterOperadorNegacao(japaitonParser.OperadorNegacaoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link japaitonParser#operadorNegacao}.
+	 * @param ctx the parse tree
+	 */
+	void exitOperadorNegacao(japaitonParser.OperadorNegacaoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link japaitonParser#expressaoPrimaria}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressaoPrimaria(japaitonParser.ExpressaoPrimariaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link japaitonParser#expressaoPrimaria}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressaoPrimaria(japaitonParser.ExpressaoPrimariaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link japaitonParser#chamadaFuncao}.
+	 * @param ctx the parse tree
+	 */
+	void enterChamadaFuncao(japaitonParser.ChamadaFuncaoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link japaitonParser#chamadaFuncao}.
+	 * @param ctx the parse tree
+	 */
+	void exitChamadaFuncao(japaitonParser.ChamadaFuncaoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link japaitonParser#listaArgumentos}.
+	 * @param ctx the parse tree
+	 */
+	void enterListaArgumentos(japaitonParser.ListaArgumentosContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link japaitonParser#listaArgumentos}.
+	 * @param ctx the parse tree
+	 */
+	void exitListaArgumentos(japaitonParser.ListaArgumentosContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link japaitonParser#type}.
 	 * @param ctx the parse tree

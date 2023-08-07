@@ -16,13 +16,13 @@ public class japaitonBaseListener implements japaitonListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram(japaitonParser.ProgramContext ctx) { }
+	@Override public void enterPrograma(japaitonParser.ProgramaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgram(japaitonParser.ProgramContext ctx) { }
+	@Override public void exitPrograma(japaitonParser.ProgramaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -40,457 +40,529 @@ public class japaitonBaseListener implements japaitonListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunction(japaitonParser.FunctionContext ctx) { }
+	@Override public void enterFuncao(japaitonParser.FuncaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunction(japaitonParser.FunctionContext ctx) { }
+	@Override public void exitFuncao(japaitonParser.FuncaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParameters(japaitonParser.ParametersContext ctx) { }
+	@Override public void enterParametros(japaitonParser.ParametrosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParameters(japaitonParser.ParametersContext ctx) { }
+	@Override public void exitParametros(japaitonParser.ParametrosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParameter(japaitonParser.ParameterContext ctx) { }
+	@Override public void enterParametro(japaitonParser.ParametroContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParameter(japaitonParser.ParameterContext ctx) { }
+	@Override public void exitParametro(japaitonParser.ParametroContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlock(japaitonParser.BlockContext ctx) { }
+	@Override public void enterEscopo(japaitonParser.EscopoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlock(japaitonParser.BlockContext ctx) { }
+	@Override public void exitEscopo(japaitonParser.EscopoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatement(japaitonParser.StatementContext ctx) { }
+	@Override public void enterBlocoDeCodigo(japaitonParser.BlocoDeCodigoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatement(japaitonParser.StatementContext ctx) { }
+	@Override public void exitBlocoDeCodigo(japaitonParser.BlocoDeCodigoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReturnStatement(japaitonParser.ReturnStatementContext ctx) { }
+	@Override public void enterReturnDeclaracao(japaitonParser.ReturnDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReturnStatement(japaitonParser.ReturnStatementContext ctx) { }
+	@Override public void exitReturnDeclaracao(japaitonParser.ReturnDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariables(japaitonParser.VariablesContext ctx) { }
+	@Override public void enterVariaveis(japaitonParser.VariaveisContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariables(japaitonParser.VariablesContext ctx) { }
+	@Override public void exitVariaveis(japaitonParser.VariaveisContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariableDeclaration(japaitonParser.VariableDeclarationContext ctx) { }
+	@Override public void enterDeclaracaoVariavel(japaitonParser.DeclaracaoVariavelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariableDeclaration(japaitonParser.VariableDeclarationContext ctx) { }
+	@Override public void exitDeclaracaoVariavel(japaitonParser.DeclaracaoVariavelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariableList(japaitonParser.VariableListContext ctx) { }
+	@Override public void enterListaVariaveis(japaitonParser.ListaVariaveisContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariableList(japaitonParser.VariableListContext ctx) { }
+	@Override public void exitListaVariaveis(japaitonParser.ListaVariaveisContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariableAssignment(japaitonParser.VariableAssignmentContext ctx) { }
+	@Override public void enterAtribuicaoVariavel(japaitonParser.AtribuicaoVariavelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariableAssignment(japaitonParser.VariableAssignmentContext ctx) { }
+	@Override public void exitAtribuicaoVariavel(japaitonParser.AtribuicaoVariavelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMultipleVariableAssignment(japaitonParser.MultipleVariableAssignmentContext ctx) { }
+	@Override public void enterAtribuicaoMultiplaVariaveis(japaitonParser.AtribuicaoMultiplaVariaveisContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMultipleVariableAssignment(japaitonParser.MultipleVariableAssignmentContext ctx) { }
+	@Override public void exitAtribuicaoMultiplaVariaveis(japaitonParser.AtribuicaoMultiplaVariaveisContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstantDeclaration(japaitonParser.ConstantDeclarationContext ctx) { }
+	@Override public void enterAtribuicaoValorVariavel(japaitonParser.AtribuicaoValorVariavelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstantDeclaration(japaitonParser.ConstantDeclarationContext ctx) { }
+	@Override public void exitAtribuicaoValorVariavel(japaitonParser.AtribuicaoValorVariavelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstantList(japaitonParser.ConstantListContext ctx) { }
+	@Override public void enterDeclaracaoConstante(japaitonParser.DeclaracaoConstanteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstantList(japaitonParser.ConstantListContext ctx) { }
+	@Override public void exitDeclaracaoConstante(japaitonParser.DeclaracaoConstanteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstantAssignment(japaitonParser.ConstantAssignmentContext ctx) { }
+	@Override public void enterListaConstantes(japaitonParser.ListaConstantesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstantAssignment(japaitonParser.ConstantAssignmentContext ctx) { }
+	@Override public void exitListaConstantes(japaitonParser.ListaConstantesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstantValue(japaitonParser.ConstantValueContext ctx) { }
+	@Override public void enterAtribuicaoConstante(japaitonParser.AtribuicaoConstanteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstantValue(japaitonParser.ConstantValueContext ctx) { }
+	@Override public void exitAtribuicaoConstante(japaitonParser.AtribuicaoConstanteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIfStatement(japaitonParser.IfStatementContext ctx) { }
+	@Override public void enterValorConstante(japaitonParser.ValorConstanteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIfStatement(japaitonParser.IfStatementContext ctx) { }
+	@Override public void exitValorConstante(japaitonParser.ValorConstanteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIfElseStatement(japaitonParser.IfElseStatementContext ctx) { }
+	@Override public void enterIfDeclaracao(japaitonParser.IfDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIfElseStatement(japaitonParser.IfElseStatementContext ctx) { }
+	@Override public void exitIfDeclaracao(japaitonParser.IfDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhileStatement(japaitonParser.WhileStatementContext ctx) { }
+	@Override public void enterIfElseDeclaracao(japaitonParser.IfElseDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhileStatement(japaitonParser.WhileStatementContext ctx) { }
+	@Override public void exitIfElseDeclaracao(japaitonParser.IfElseDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressionStatement(japaitonParser.ExpressionStatementContext ctx) { }
+	@Override public void enterWhileDeclaracao(japaitonParser.WhileDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressionStatement(japaitonParser.ExpressionStatementContext ctx) { }
+	@Override public void exitWhileDeclaracao(japaitonParser.WhileDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrintStatement(japaitonParser.PrintStatementContext ctx) { }
+	@Override public void enterPrintDeclaracao(japaitonParser.PrintDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrintStatement(japaitonParser.PrintStatementContext ctx) { }
+	@Override public void exitPrintDeclaracao(japaitonParser.PrintDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressionList(japaitonParser.ExpressionListContext ctx) { }
+	@Override public void enterPrintParametros(japaitonParser.PrintParametrosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressionList(japaitonParser.ExpressionListContext ctx) { }
+	@Override public void exitPrintParametros(japaitonParser.PrintParametrosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCondition(japaitonParser.ConditionContext ctx) { }
+	@Override public void enterScanfDeclaracao(japaitonParser.ScanfDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCondition(japaitonParser.ConditionContext ctx) { }
+	@Override public void exitScanfDeclaracao(japaitonParser.ScanfDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(japaitonParser.ExpressionContext ctx) { }
+	@Override public void enterListaIDs(japaitonParser.ListaIDsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(japaitonParser.ExpressionContext ctx) { }
+	@Override public void exitListaIDs(japaitonParser.ListaIDsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLogicalExpression(japaitonParser.LogicalExpressionContext ctx) { }
+	@Override public void enterIdOrString(japaitonParser.IdOrStringContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLogicalExpression(japaitonParser.LogicalExpressionContext ctx) { }
+	@Override public void exitIdOrString(japaitonParser.IdOrStringContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLogicOperator(japaitonParser.LogicOperatorContext ctx) { }
+	@Override public void enterExpressoesDeclaracao(japaitonParser.ExpressoesDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLogicOperator(japaitonParser.LogicOperatorContext ctx) { }
+	@Override public void exitExpressoesDeclaracao(japaitonParser.ExpressoesDeclaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEqualityExpression(japaitonParser.EqualityExpressionContext ctx) { }
+	@Override public void enterListaExpressoes(japaitonParser.ListaExpressoesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEqualityExpression(japaitonParser.EqualityExpressionContext ctx) { }
+	@Override public void exitListaExpressoes(japaitonParser.ListaExpressoesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEqualityOperator(japaitonParser.EqualityOperatorContext ctx) { }
+	@Override public void enterCondicao(japaitonParser.CondicaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEqualityOperator(japaitonParser.EqualityOperatorContext ctx) { }
+	@Override public void exitCondicao(japaitonParser.CondicaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRelationalExpression(japaitonParser.RelationalExpressionContext ctx) { }
+	@Override public void enterExpressoes(japaitonParser.ExpressoesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRelationalExpression(japaitonParser.RelationalExpressionContext ctx) { }
+	@Override public void exitExpressoes(japaitonParser.ExpressoesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRelationalOperator(japaitonParser.RelationalOperatorContext ctx) { }
+	@Override public void enterExpressaoString(japaitonParser.ExpressaoStringContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRelationalOperator(japaitonParser.RelationalOperatorContext ctx) { }
+	@Override public void exitExpressaoString(japaitonParser.ExpressaoStringContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAdditiveExpression(japaitonParser.AdditiveExpressionContext ctx) { }
+	@Override public void enterExpressaoLogica(japaitonParser.ExpressaoLogicaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAdditiveExpression(japaitonParser.AdditiveExpressionContext ctx) { }
+	@Override public void exitExpressaoLogica(japaitonParser.ExpressaoLogicaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAdditiveOperator(japaitonParser.AdditiveOperatorContext ctx) { }
+	@Override public void enterOperadoresLogicos(japaitonParser.OperadoresLogicosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAdditiveOperator(japaitonParser.AdditiveOperatorContext ctx) { }
+	@Override public void exitOperadoresLogicos(japaitonParser.OperadoresLogicosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMultiplicativeExpression(japaitonParser.MultiplicativeExpressionContext ctx) { }
+	@Override public void enterExpressaoIgualdade(japaitonParser.ExpressaoIgualdadeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMultiplicativeExpression(japaitonParser.MultiplicativeExpressionContext ctx) { }
+	@Override public void exitExpressaoIgualdade(japaitonParser.ExpressaoIgualdadeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMultiplicativeOperator(japaitonParser.MultiplicativeOperatorContext ctx) { }
+	@Override public void enterOperadorIgualdade(japaitonParser.OperadorIgualdadeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMultiplicativeOperator(japaitonParser.MultiplicativeOperatorContext ctx) { }
+	@Override public void exitOperadorIgualdade(japaitonParser.OperadorIgualdadeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterUnaryExpression(japaitonParser.UnaryExpressionContext ctx) { }
+	@Override public void enterExpressaoRelacional(japaitonParser.ExpressaoRelacionalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitUnaryExpression(japaitonParser.UnaryExpressionContext ctx) { }
+	@Override public void exitExpressaoRelacional(japaitonParser.ExpressaoRelacionalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterUnaryOperator(japaitonParser.UnaryOperatorContext ctx) { }
+	@Override public void enterOperadorGrandeza(japaitonParser.OperadorGrandezaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitUnaryOperator(japaitonParser.UnaryOperatorContext ctx) { }
+	@Override public void exitOperadorGrandeza(japaitonParser.OperadorGrandezaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrimaryExpression(japaitonParser.PrimaryExpressionContext ctx) { }
+	@Override public void enterExpressaoGrandeza(japaitonParser.ExpressaoGrandezaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrimaryExpression(japaitonParser.PrimaryExpressionContext ctx) { }
+	@Override public void exitExpressaoGrandeza(japaitonParser.ExpressaoGrandezaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionCall(japaitonParser.FunctionCallContext ctx) { }
+	@Override public void enterOperadorAditivo(japaitonParser.OperadorAditivoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunctionCall(japaitonParser.FunctionCallContext ctx) { }
+	@Override public void exitOperadorAditivo(japaitonParser.OperadorAditivoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArgumentList(japaitonParser.ArgumentListContext ctx) { }
+	@Override public void enterExpressaoMultiplicativa(japaitonParser.ExpressaoMultiplicativaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArgumentList(japaitonParser.ArgumentListContext ctx) { }
+	@Override public void exitExpressaoMultiplicativa(japaitonParser.ExpressaoMultiplicativaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOperadorMultiplicativo(japaitonParser.OperadorMultiplicativoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOperadorMultiplicativo(japaitonParser.OperadorMultiplicativoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpressaoNegativa(japaitonParser.ExpressaoNegativaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpressaoNegativa(japaitonParser.ExpressaoNegativaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOperadorNegacao(japaitonParser.OperadorNegacaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOperadorNegacao(japaitonParser.OperadorNegacaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpressaoPrimaria(japaitonParser.ExpressaoPrimariaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpressaoPrimaria(japaitonParser.ExpressaoPrimariaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterChamadaFuncao(japaitonParser.ChamadaFuncaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitChamadaFuncao(japaitonParser.ChamadaFuncaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterListaArgumentos(japaitonParser.ListaArgumentosContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitListaArgumentos(japaitonParser.ListaArgumentosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
